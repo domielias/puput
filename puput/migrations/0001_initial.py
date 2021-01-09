@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('num_last_entries', models.IntegerField(default=3, verbose_name='Last entries limit')),
                 ('num_popular_entries', models.IntegerField(default=3, verbose_name='Popular entries limit')),
                 ('num_tags_entry_header', models.IntegerField(default=5, verbose_name='Tags limit entry header')),
-                ('header_image', models.ForeignKey(related_name='+', on_delete=django.db.models.deletion.SET_NULL, verbose_name='Header image', blank=True, to='wagtailimages.Image', null=True)),
+                ('header_image', models.IntegerField(blank=True, null=True)),
             ],
             options={
                 'verbose_name': 'Blog',
@@ -76,7 +76,7 @@ class Migration(migrations.Migration):
                 ('excerpt', wagtail.core.fields.RichTextField(help_text='Used to display on puput pages list. If this field is not filled, a truncate version of body text will be used.', verbose_name='excerpt', blank=True)),
                 ('num_comments', models.IntegerField(default=0, editable=False)),
                 ('categories', models.ManyToManyField(to='puput.Category', through='puput.CategoryEntryPage', blank=True)),
-                ('header_image', models.ForeignKey(related_name='+', on_delete=django.db.models.deletion.SET_NULL, verbose_name='Header image', blank=True, to='wagtailimages.Image', null=True)),
+                ('header_image', models.IntegerField(blank=True, null=True)),
             ],
             options={
                 'verbose_name': 'Entry',
