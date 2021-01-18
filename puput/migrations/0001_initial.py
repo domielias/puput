@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('wagtailcore', '0001_squashed_0016_change_page_url_path_to_text_field'),
-        ('wagtailimages', '0006_add_verbose_names'),
+        # ('wagtailimages', '0006_add_verbose_names'),
     ]
 
     operations = [
